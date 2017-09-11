@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 for (int y = 0;y<current.getItems().size();y++){
                     LineItems item = current.getItems().get(y);
-                    if (item.name.equals("Awesome Bronze Bag")){
+                    if (item.getName().equals("Awesome Bronze Bag")){
                         total += item.getQuantity();
                         break;
                     }
