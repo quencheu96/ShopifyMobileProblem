@@ -14,8 +14,6 @@ public class Order {
 
     @SerializedName("total_price")
     double totalPrice;
-    @SerializedName("subtotal_price")
-    double subtotalPrice;
     @SerializedName("line_items")
     List<LineItems> items;
     @SerializedName("customer")
@@ -24,10 +22,6 @@ public class Order {
 
     public double getTotalPrice() {
         return totalPrice;
-    }
-
-    public double getSubtotalPrice() {
-        return subtotalPrice;
     }
 
     public List<LineItems> getItems() {

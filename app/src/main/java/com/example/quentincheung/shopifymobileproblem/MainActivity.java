@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-            textOne.setText("Amount spent by Napolean: "+ Double.toString(totalSpent));
+            textOne.setText("Amount spent by Napolean Batz: "+ Double.toString(totalSpent));
             textTwo.setText("Total Number of Awesome Bronze Bags sold: "+ total);
         }
     };
