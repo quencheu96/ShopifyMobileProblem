@@ -22,7 +22,6 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.textOne) TextView textOne;
     @BindView(R.id.textTwo) TextView textTwo;
-    @BindView(R.id.button) Button button;
 
     String url = "https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6";
     private RequestQueue requestQueue;
@@ -38,14 +37,8 @@ public class MainActivity extends AppCompatActivity {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setDateFormat("M/d/yy hh:mm a");
         gson = gsonBuilder.create();
+        fetchPosts();
 
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fetchPosts();
-            }
-        });
     }
 
     private void fetchPosts() {
@@ -74,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-            textOne.setText("Amount spent by Napolean Batz: "+ Double.toString(totalSpent));
+            textOne.setText("Amount spent by Napoleon Batz: CAD $"+ Double.toString(totalSpent));
             textTwo.setText("Total Number of Awesome Bronze Bags sold: "+ total);
         }
     };
